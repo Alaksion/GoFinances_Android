@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/app_purple"
+        tools:context=".presentation.main.DashBoardFragment">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/iv_logo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/application_logo"
+                android:src="@drawable/ic_logo"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_incomes"
+            android:layout_width="125dp"
+            android:layout_height="125dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/rounded_rectangular_white"
+            app:layout_constraintEnd_toStartOf="@id/cl_outcomes"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cl_toolbar">
+
+            <TextView
+                android:id="@+id/tv_income"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_bold"
+                android:textColor="@color/app_green"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="R$ 250,00" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ImageView
+            android:id="@+id/iv_income_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/circle_background"
+            android:src="@drawable/ic_income"
+            app:layout_constraintBottom_toTopOf="@id/cl_incomes"
+            app:layout_constraintEnd_toEndOf="@id/cl_incomes"
+            app:layout_constraintStart_toStartOf="@id/cl_incomes"
+            app:layout_constraintTop_toTopOf="@id/cl_incomes" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_outcomes"
+            android:layout_width="125dp"
+            android:layout_height="125dp"
+            android:background="@drawable/rounded_rectangular_white"
+            app:layout_constraintEnd_toStartOf="@id/cl_total"
+            app:layout_constraintStart_toEndOf="@id/cl_incomes"
+            app:layout_constraintTop_toTopOf="@id/cl_incomes">
+
+            <TextView
+                android:id="@+id/tv_outcome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_bold"
+                android:textColor="@color/app_red"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="R$ 250,00" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ImageView
+            android:id="@+id/iv_outcome_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/circle_background"
+            android:src="@drawable/ic_outcome"
+            app:layout_constraintBottom_toTopOf="@id/cl_outcomes"
+            app:layout_constraintEnd_toEndOf="@id/cl_outcomes"
+            app:layout_constraintStart_toStartOf="@id/cl_outcomes"
+            app:layout_constraintTop_toTopOf="@id/cl_outcomes" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_total"
+            android:layout_width="125dp"
+            android:layout_height="125dp"
+            android:background="@drawable/rounded_rectangular_orange"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/cl_outcomes"
+            app:layout_constraintTop_toTopOf="@id/cl_incomes">
+
+            <TextView
+                android:id="@+id/tv_total"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_bold"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="R$ 0,00" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ImageView
+            android:id="@+id/iv_summary_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/circle_background_orange"
+            android:src="@drawable/ic_total"
+            app:layout_constraintBottom_toTopOf="@id/cl_total"
+            app:layout_constraintEnd_toEndOf="@id/cl_total"
+            app:layout_constraintStart_toStartOf="@id/cl_total"
+            app:layout_constraintTop_toTopOf="@id/cl_total" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

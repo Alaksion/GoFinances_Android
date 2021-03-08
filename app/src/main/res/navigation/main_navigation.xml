@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/dashBoardFragment">
+
+    <fragment
+        android:id="@+id/dashBoardFragment"
+        android:name="com.alaksion.gofinances.presentation.main.DashBoardFragment"
+        android:label="fragment_dash_board"
+        tools:layout="@layout/fragment_dash_board" >
+        <action
+            android:id="@+id/a_dashboard_to_create"
+            app:destination="@id/createTransactionFrag" />
+    </fragment>
+    <fragment
+        android:id="@+id/createTransactionFrag"
+        android:name="com.alaksion.gofinances.presentation.main.CreateTransactionFrag"
+        android:label="fragment_create_transaction"
+        tools:layout="@layout/fragment_create_transaction" >
+        <action
+            android:id="@+id/a_create_to_dashboard"
+            app:destination="@id/dashBoardFragment" />
+    </fragment>
+</navigation>
