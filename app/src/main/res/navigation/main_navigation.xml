@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/dashBoardFragment"
-        android:name="com.alaksion.gofinances.presentation.main.DashBoardFragment"
+        android:name="com.alaksion.gofinances.presentation.main.dashboard.DashBoardFragment"
         android:label="fragment_dash_board"
         tools:layout="@layout/fragment_dash_board" >
         <action
@@ -16,7 +16,7 @@
     </fragment>
     <fragment
         android:id="@+id/createTransactionFrag"
-        android:name="com.alaksion.gofinances.presentation.main.CreateTransactionFrag"
+        android:name="com.alaksion.gofinances.presentation.main.createtransaction.CreateTransactionFrag"
         android:label="fragment_create_transaction"
         tools:layout="@layout/fragment_create_transaction" >
         <action

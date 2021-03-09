@@ -1,4 +1,4 @@
-package com.alaksion.gofinances.presentation.main
+package com.alaksion.gofinances.presentation.main.createtransaction
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -12,7 +12,6 @@ class CreateTransactionFrag : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_create_transaction, container, false)
     }
 }
