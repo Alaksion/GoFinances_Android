@@ -18,10 +18,6 @@ class GoFinancesTransactionRepositoryImpl(
     }
 
     override suspend fun create(transactionData: TransactionData) {
-
-        CoroutineScope(IO).launch {
-            localDataSource.create(transactionData)
-        }
-
+        localDataSource.create(transactionData)
     }
 }

@@ -3,11 +3,12 @@ package com.alaksion.gofinances.domain.usecase
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.Transformations
 import com.alaksion.gofinances.data.model.mapToTransaction
+import com.alaksion.gofinances.data.repository.GoFinancesTransactionRepositoryImpl
 import com.alaksion.gofinances.domain.model.Transaction
 import com.alaksion.gofinances.domain.repository.GoFinancesTransactionRepository
 
 class GetTransactionUseCase(
-    private val repository: GoFinancesTransactionRepository
+    private val repository: GoFinancesTransactionRepositoryImpl
 ) {
 
     operator fun invoke(): LiveData<List<Transaction>> {

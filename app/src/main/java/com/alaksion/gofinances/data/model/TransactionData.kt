@@ -19,7 +19,7 @@ data class TransactionData(
     val value : Double,
 
     @ColumnInfo(name = "description")
-    val description : Double,
+    val description : String,
 
     @ColumnInfo(name = "createdAt")
     val createdAt : String,
@@ -36,5 +36,16 @@ fun TransactionData.mapToTransaction() : Transaction {
         description = this.description,
         createdAt = this.createdAt,
         category = this.category
+    )
+}
+
+fun Transaction.mapToTransactionData() : TransactionData {
+    return TransactionData(
+        id = this.id,
+        title = this.title,
+        value = this.value,
+        description = this.description,
+        createdAt =  this.createdAt,
+        category =  this.category
     )
 }

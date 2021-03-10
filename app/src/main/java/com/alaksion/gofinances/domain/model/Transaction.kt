@@ -4,7 +4,7 @@ data class Transaction(
     val id : Long,
     val title : String,
     val value : Double,
-    val description : Double,
+    val description : String,
     val createdAt : String,
     val category : String
 )

@@ -1,6 +1,7 @@
 package com.alaksion.gofinances.data.local
 
 import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
 import com.alaksion.gofinances.data.datasource.GoFinancesLocalDataSource
 import com.alaksion.gofinances.data.model.TransactionData
 import com.alaksion.gofinances.shared.database.GoFinanceDatabase

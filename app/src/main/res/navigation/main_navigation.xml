@@ -12,7 +12,11 @@
         tools:layout="@layout/fragment_dash_board" >
         <action
             android:id="@+id/a_dashboard_to_create"
-            app:destination="@id/createTransactionFrag" />
+            app:destination="@id/createTransactionFrag"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
     </fragment>
     <fragment
         android:id="@+id/createTransactionFrag"
@@ -21,6 +25,10 @@
         tools:layout="@layout/fragment_create_transaction" >
         <action
             android:id="@+id/a_create_to_dashboard"
-            app:destination="@id/dashBoardFragment" />
+            app:destination="@id/dashBoardFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_pop_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
     </fragment>
 </navigation>
