@@ -10,8 +10,8 @@ import com.alaksion.gofinances.data.model.TransactionData
 interface TransactionsDAO {
 
     @Insert
-    suspend fun create(transaction: TransactionData)
+    fun create(transaction: TransactionData)
 
     @Query(value = "select * from TransactionData order by createdAt desc")
-    fun get() : LiveData<List<TransactionData>>
+    fun get() : List<TransactionData>
 }

@@ -9,7 +9,13 @@
         <item name="android:buttonBarStyle">?android:attr/buttonBarStyle</item>
     </style>
 
-    <style name="transaction_summary_box">
-
+    <style name="create_transaction_edit_text">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:fontFamily">@font/roboto</item>
+        <item name="android:paddingVertical">5dp</item>
+        <item name="android:paddingHorizontal">20dp</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColorHint">@color/black_overlay</item>
+        <item name="android:background">@color/white</item>
     </style>
 </resources>

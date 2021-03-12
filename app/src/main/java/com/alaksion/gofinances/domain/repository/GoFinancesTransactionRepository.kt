@@ -5,7 +5,7 @@ import com.alaksion.gofinances.data.model.TransactionData
 
 interface GoFinancesTransactionRepository {
 
-    fun get(): LiveData<List<TransactionData>>
+    fun get(): List<TransactionData>
 
-    suspend fun create(transactionData: TransactionData)
+    fun create(transactionData: TransactionData)
 }
