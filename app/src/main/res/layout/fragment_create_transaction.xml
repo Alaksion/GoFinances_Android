@@ -18,6 +18,21 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
+            <TextView
+                android:id="@+id/tv_screen_title"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="5dp"
+                android:fontFamily="@font/roboto_bold"
+                android:gravity="center_vertical"
+                android:text="@string/cadastrar_transa_o"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="@id/iv_back_button"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/iv_back_button"
+                app:layout_constraintTop_toTopOf="@id/iv_back_button" />
+
             <ImageView
                 android:id="@+id/iv_back_button"
                 android:layout_width="wrap_content"
@@ -30,74 +45,68 @@
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-
-        <ImageView
-            android:id="@+id/iv_title_icon"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_title"
-            android:background="@color/white"
-            android:padding="5dp"
-            app:layout_constraintBottom_toBottomOf="@id/et_title"
-            app:layout_constraintEnd_toStartOf="@id/et_title"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@id/et_title" />
-
         <EditText
             android:id="@+id/et_title"
+            style="@style/create_transaction_edit_text"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
             android:layout_marginTop="20dp"
             android:hint="@string/titulo"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@id/iv_title_icon"
-            app:layout_constraintTop_toBottomOf="@id/cl_toolbar"
-            style="@style/create_transaction_edit_text"/>
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cl_toolbar" />
 
         <EditText
             android:id="@+id/et_description"
+            style="@style/create_transaction_edit_text"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:background="@color/white"
-            android:hint="Descrição"
+            android:hint="@string/descri_o"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/et_title" />
 
         <EditText
             android:id="@+id/et_value"
+
+            style="@style/create_transaction_edit_text"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:background="@color/white"
             android:hint="Valor"
             android:inputType="numberDecimal"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/et_description" />
 
-        <EditText
-            android:id="@+id/et_category"
+        <Spinner
+            android:id="@+id/s_category"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:background="@color/white"
-            android:hint="Categoria"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/et_value" />
+            app:layout_constraintTop_toBottomOf="@id/et_value"
+            android:background="@drawable/rounded_rectangular_white_10dp"
+            android:paddingHorizontal="16dp"
+            android:spinnerMode="dropdown" />
 
         <Button
             android:id="@+id/b_submit"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:text="Salvar"
+            android:text="@string/salvar"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/et_category" />
+            app:layout_constraintTop_toBottomOf="@id/s_category"
+            android:backgroundTint="@color/app_orange"
+            android:textColor="@color/black"
+            android:fontFamily="@font/roboto"
+            android:textAllCaps="false"
+            android:textSize="16sp"
+            android:padding="10dp"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

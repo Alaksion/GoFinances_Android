@@ -77,7 +77,7 @@ class DashBoardFragment : Fragment() {
     private fun setCardValues(transactionList: List<Transaction>) {
         var incomes = 0.0
         var outcomes = 0.0
-        var total = 0.0
+        val total: Double
 
         transactionList.forEach {
             if (it.category == TransactionTypes.INCOME.getText()) {

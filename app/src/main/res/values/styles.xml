@@ -12,10 +12,24 @@
     <style name="create_transaction_edit_text">
         <item name="android:textColor">@color/black</item>
         <item name="android:fontFamily">@font/roboto</item>
-        <item name="android:paddingVertical">5dp</item>
-        <item name="android:paddingHorizontal">20dp</item>
+        <item name="android:paddingVertical">8dp</item>
+        <item name="android:paddingHorizontal">22dp</item>
         <item name="android:textSize">18sp</item>
         <item name="android:textColorHint">@color/black_overlay</item>
-        <item name="android:background">@color/white</item>
+        <item name="android:background">@drawable/rounded_rectangular_white_10dp</item>
+    </style>
+
+    <style name="create_transaction_spinner">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:fontFamily">@font/roboto</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColorHint">@color/black_overlay</item>
+        <item name="android:background">@drawable/rounded_rectangular_white_10dp</item>
+    </style>
+
+    <style name="button">
+        <item name="android:backgroundTint">@color/app_orange</item>
+        <item name="android:padding">12dp</item>
+        <item name="android:textColor">@color/black_overlay</item>
     </style>
 </resources>

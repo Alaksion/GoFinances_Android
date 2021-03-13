@@ -9,4 +9,9 @@
     <string name="transaction_type_icon">Transaction type icon</string>
     <string name="titulo">Titulo</string>
     <string name="t_tulo">Título</string>
+    <string name="minhas_transa_es">Minhas transações</string>
+    <string name="cadastrar_transa_o">Cadastrar Transação</string>
+    <string name="descri_o">Descrição</string>
+    <string name="salvar">Salvar</string>
+
 </resources>
