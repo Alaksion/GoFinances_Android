@@ -10,6 +10,7 @@ import android.view.inputmethod.InputMethodManager
 import android.widget.ArrayAdapter
 import android.widget.SpinnerAdapter
 import androidx.databinding.DataBindingUtil
+import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
 import com.alaksion.gofinances.R
 import com.alaksion.gofinances.databinding.FragmentCreateTransactionBinding
@@ -40,6 +41,7 @@ class CreateTransactionFrag : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         setUpListeners()
         setUpSpinner()
+        setUpObservers()
     }
 
     private fun setUpListeners() {
@@ -50,8 +52,13 @@ class CreateTransactionFrag : Fragment() {
         viewBinding.bSubmit.setOnClickListener() {
             submitForm()
             closeKeyBoard(it)
-            findNavController().navigate(R.id.a_create_to_dashboard)
         }
+    }
+
+    private fun setUpObservers() {
+        mViewModel.notifyNavigateBackToDashboard.observe(viewLifecycleOwner, Observer {
+            findNavController().navigate(R.id.a_create_to_dashboard)
+        })
     }
 
     private fun submitForm() {

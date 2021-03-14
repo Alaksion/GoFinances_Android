@@ -1,4 +1,4 @@
-package com.alaksion.gofinances.shared.database
+package com.alaksion.gofinances.data.local
 
 import androidx.room.Database
 import androidx.room.RoomDatabase

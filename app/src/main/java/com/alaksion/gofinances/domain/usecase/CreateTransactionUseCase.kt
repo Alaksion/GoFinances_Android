@@ -14,7 +14,7 @@ class CreateTransactionUseCase(
     private val repository: GoFinancesTransactionRepositoryImpl
 ) {
 
-    operator fun invoke(
+    suspend operator fun invoke(
         title: String,
         value: Double,
         description: String,

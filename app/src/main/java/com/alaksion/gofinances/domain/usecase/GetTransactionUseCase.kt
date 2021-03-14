@@ -8,7 +8,7 @@ class GetTransactionUseCase(
     private val repository: GoFinancesTransactionRepositoryImpl
 ) {
 
-    operator fun invoke(): List<Transaction> {
+    suspend operator fun invoke(): List<Transaction> {
         return repository.get().map { item -> item.mapToTransaction() }
     }
 }

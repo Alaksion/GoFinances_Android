@@ -1,4 +1,4 @@
-package com.alaksion.gofinances.shared
+package com.alaksion.gofinances
 
 import android.app.Application
 import com.alaksion.gofinances.di.transactionModule
