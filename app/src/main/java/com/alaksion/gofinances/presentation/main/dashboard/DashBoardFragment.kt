@@ -32,7 +32,7 @@ class DashBoardFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        FragmentDashBoardBinding.inflate(inflater)
+        viewBinding = FragmentDashBoardBinding.inflate(inflater)
         return viewBinding.root
     }
 
