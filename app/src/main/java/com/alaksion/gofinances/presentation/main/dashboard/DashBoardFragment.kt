@@ -32,13 +32,7 @@ class DashBoardFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-
-        viewBinding = DataBindingUtil.inflate(
-            inflater,
-            R.layout.fragment_dash_board,
-            container,
-            false
-        )
+        FragmentDashBoardBinding.inflate(inflater)
         return viewBinding.root
     }
 

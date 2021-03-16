@@ -27,13 +27,7 @@ class CreateTransactionFrag : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        viewBinding = DataBindingUtil.inflate(
-            inflater,
-            R.layout.fragment_create_transaction,
-            container,
-            false
-        )
-
+        viewBinding = FragmentCreateTransactionBinding.inflate(inflater)
         return viewBinding.root
     }
 
