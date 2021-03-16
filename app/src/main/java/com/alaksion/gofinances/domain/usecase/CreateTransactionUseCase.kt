@@ -17,7 +17,6 @@ class CreateTransactionUseCase(
     suspend operator fun invoke(
         title: String,
         value: Double,
-        description: String,
         category: String
     ) {
 
@@ -27,7 +26,6 @@ class CreateTransactionUseCase(
         val transaction = Transaction(
             title = title,
             value = value,
-            description = description,
             category = category,
             createdAt = currentDate,
             id = 0

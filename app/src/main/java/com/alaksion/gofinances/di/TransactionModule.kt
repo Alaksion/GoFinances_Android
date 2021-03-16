@@ -8,6 +8,7 @@ import com.alaksion.gofinances.domain.usecase.GetTransactionUseCase
 import com.alaksion.gofinances.presentation.main.createtransaction.CreateTransactionViewModel
 import com.alaksion.gofinances.presentation.main.dashboard.DashBoardViewModel
 import com.alaksion.gofinances.data.local.GoFinanceDatabase
+import com.alaksion.gofinances.domain.usecase.DeleteTransactionUseCase
 import org.koin.android.viewmodel.ext.koin.viewModel
 import org.koin.dsl.module.module
 
@@ -18,9 +19,14 @@ val transactionModule = module {
 
     factory { GetTransactionUseCase(repository = get()) }
     factory { CreateTransactionUseCase(repository = get()) }
+    factory { DeleteTransactionUseCase(repository = get()) }
 
     viewModel {
-        DashBoardViewModel(getTransactionUseCase = get(), application = get())
+        DashBoardViewModel(
+            getTransactionUseCase = get(),
+            application = get(),
+            deleteTransactionUseCase = get()
+        )
     }
 
     viewModel {

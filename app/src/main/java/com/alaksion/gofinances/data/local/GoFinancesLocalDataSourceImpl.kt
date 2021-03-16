@@ -14,4 +14,8 @@ class GoFinancesLocalDataSourceImpl(
     override suspend fun create(transactionData: TransactionData) {
         db.transactionDao().create(transactionData)
     }
+
+    override suspend fun delete(transactionData: TransactionData) {
+        db.transactionDao().delete(transactionData)
+    }
 }

@@ -13,5 +13,6 @@
     <string name="cadastrar_transa_o">Cadastrar Transação</string>
     <string name="descri_o">Descrição</string>
     <string name="salvar">Salvar</string>
+    <string name="valor">Valor</string>
 
 </resources>

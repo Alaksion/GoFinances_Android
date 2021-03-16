@@ -7,4 +7,6 @@ interface GoFinancesTransactionRepository {
     suspend fun get(): List<TransactionData>
 
     suspend fun create(transactionData: TransactionData)
+
+    suspend fun delete(transactionData: TransactionData)
 }

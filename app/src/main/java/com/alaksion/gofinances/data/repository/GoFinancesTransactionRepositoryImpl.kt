@@ -6,7 +6,7 @@ import com.alaksion.gofinances.domain.repository.GoFinancesTransactionRepository
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers.IO
 import kotlinx.coroutines.launch
-import kotlinx.coroutines.runBlocking
+import kotlinx.coroutines.withContext
 
 
 class GoFinancesTransactionRepositoryImpl(
@@ -14,13 +14,21 @@ class GoFinancesTransactionRepositoryImpl(
 ) : GoFinancesTransactionRepository {
 
 
-    override suspend fun get() = runBlocking {
-        localDataSource.get()
+    override suspend fun get(): List<TransactionData> {
+        return withContext(CoroutineScope(IO).coroutineContext) {
+            localDataSource.get()
+        }
     }
 
     override suspend fun create(transactionData: TransactionData) {
         CoroutineScope(IO).launch {
             localDataSource.create(transactionData)
+        }
+    }
+
+    override suspend fun delete(transactionData: TransactionData) {
+        CoroutineScope(IO).launch {
+            localDataSource.delete(transactionData)
         }
     }
 }

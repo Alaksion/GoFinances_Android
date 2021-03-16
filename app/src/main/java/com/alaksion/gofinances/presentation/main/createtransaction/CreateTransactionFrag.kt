@@ -8,14 +8,11 @@ import android.view.View
 import android.view.ViewGroup
 import android.view.inputmethod.InputMethodManager
 import android.widget.ArrayAdapter
-import android.widget.SpinnerAdapter
-import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
 import com.alaksion.gofinances.R
 import com.alaksion.gofinances.databinding.FragmentCreateTransactionBinding
 import com.alaksion.gofinances.domain.model.TransactionTypes
-import com.alaksion.gofinances.presentation.main.dashboard.DashBoardViewModel
 import org.koin.android.viewmodel.ext.android.viewModel
 
 class CreateTransactionFrag : Fragment() {
@@ -57,7 +54,6 @@ class CreateTransactionFrag : Fragment() {
 
     private fun submitForm() {
         mViewModel.createTransaction(
-            description = viewBinding.etDescription.text.toString(),
             title = viewBinding.etTitle.text.toString(),
             value = viewBinding.etValue.text.toString(),
             category = viewBinding.sCategory.selectedItem.toString()

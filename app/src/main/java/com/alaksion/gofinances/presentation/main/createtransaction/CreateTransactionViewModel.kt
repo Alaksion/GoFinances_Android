@@ -17,12 +17,11 @@ class CreateTransactionViewModel(
 
     fun createTransaction(
         title: String,
-        description: String,
-        value: String,
-        category: String
+        category: String,
+        value: String
     ) {
         viewModelScope.launch {
-            createTransactionUseCase.invoke(title, value.toDouble(), description, category)
+            createTransactionUseCase.invoke(title, value.toDouble(), category)
             notifyNavigateBackToDashboard.value = Event(Unit)
         }
 
