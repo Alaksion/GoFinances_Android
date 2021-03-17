@@ -21,13 +21,13 @@ class GoFinancesTransactionRepositoryImpl(
     }
 
     override suspend fun create(transactionData: TransactionData) {
-        CoroutineScope(IO).launch {
+        withContext(CoroutineScope(IO).coroutineContext) {
             localDataSource.create(transactionData)
         }
     }
 
     override suspend fun delete(transactionData: TransactionData) {
-        CoroutineScope(IO).launch {
+        withContext(CoroutineScope(IO).coroutineContext) {
             localDataSource.delete(transactionData)
         }
     }
