@@ -30,7 +30,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         tools:text="Titulo 1"
-        android:textSize="20sp"
+        android:textSize="16sp"
         android:fontFamily="@font/roboto_bold"
         android:textColor="@color/black_overlay"
         android:layout_marginStart="10dp"
@@ -45,7 +45,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         tools:text="$ 20,00"
-        android:textSize="20sp"
+        android:textSize="18sp"
         android:fontFamily="@font/roboto_bold"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
