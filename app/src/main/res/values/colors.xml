@@ -16,6 +16,7 @@
 
     <color name="app_purple">#5636d3</color>
     <color name="app_orange">#ff872c</color>
+    <color name="app_orange_faded">#b3ff872c</color>
     <color name="app_green">#12A454</color>
     <color name="app_red">#E83F5B</color>
 </resources>

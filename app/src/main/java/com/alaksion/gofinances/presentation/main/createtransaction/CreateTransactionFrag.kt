@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.view.inputmethod.InputMethodManager
 import android.widget.ArrayAdapter
+import androidx.core.widget.doAfterTextChanged
 import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
 import com.alaksion.gofinances.R
@@ -66,11 +67,26 @@ class CreateTransactionFrag : Fragment() {
             android.R.layout.simple_spinner_dropdown_item,
             TransactionTypes.values()
         )
+
+        viewBinding.etTitle.doAfterTextChanged { enableButtonIfFormFilled() }
+        viewBinding.etValue.doAfterTextChanged { enableButtonIfFormFilled() }
     }
 
     private fun closeKeyBoard(v: View) {
         val manager = context?.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
         manager.hideSoftInputFromWindow(v.windowToken, 0)
+
+    }
+
+    private fun enableButtonIfFormFilled() {
+        viewBinding.bSubmit.apply {
+            isEnabled =
+                !viewBinding.etTitle.text.isNullOrEmpty() && !viewBinding.etValue.text.isNullOrEmpty()
+
+            text =
+                if (isEnabled) context.getString(R.string.salvar) else context.getString(R.string.preencha_todos_os_campos)
+        }
+
 
     }
 }

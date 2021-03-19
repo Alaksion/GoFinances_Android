@@ -14,5 +14,6 @@
     <string name="descri_o">Descrição</string>
     <string name="salvar">Salvar</string>
     <string name="valor">Valor</string>
+    <string name="preencha_todos_os_campos">Preencha todos os campos</string>
 
 </resources>

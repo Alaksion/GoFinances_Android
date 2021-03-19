@@ -80,14 +80,15 @@
         app:layout_constraintTop_toBottomOf="@id/et_value" />
 
     <Button
-        android:backgroundTint="@color/app_orange"
+        android:backgroundTint="@color/button_color"
+        android:enabled="false"
         android:fontFamily="@font/roboto"
         android:id="@+id/b_submit"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:layout_width="match_parent"
         android:padding="10dp"
-        android:text="@string/salvar"
+        android:text="@string/preencha_todos_os_campos"
         android:textAllCaps="false"
         android:textColor="@color/black"
         android:textSize="16sp"
